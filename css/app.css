@@ -1,0 +1,302 @@
+/*
+ web dev quiz,
+ created by : Amardeep Kesharwani,
+ date : 8-august-2020,
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Google Sans, sans-serif;
+  line-height: 1.3;
+  font-size: 16px;
+  background: #f5f5f5;
+  color: #333;
+}
+button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 10px 25px;
+  transition: 300ms ease-in;
+}
+img {
+  max-width: 100%;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.sec2,
+.sec3,
+.sec4,
+.sec5 {
+  display: none;
+}
+.sec1,
+.sec2 {
+  background: #fff;
+  text-align: center;
+}
+.sec1 p,
+.sec2 p {
+  font-size: 19px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.input {
+  outline: none;
+  border: 2px solid #f2d533;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.sec1 h3 {
+  margin-top: -25px;
+  margin-bottom: 10px;
+  color: #f2d533;
+  font-size: 24px;
+}
+.sec3 {
+  background: linear-gradient(
+      252deg,
+      rgba(69, 69, 69, 0.03) 0%,
+      rgba(69, 69, 69, 0.03) 50%,
+      rgba(47, 47, 47, 0.03) 50%,
+      rgba(47, 47, 47, 0.03) 100%
+    ),
+    linear-gradient(
+      335deg,
+      rgba(66, 66, 66, 0.09) 0%,
+      rgba(66, 66, 66, 0.09) 50%,
+      rgba(188, 188, 188, 0.09) 50%,
+      rgba(188, 188, 188, 0.09) 100%
+    ),
+    linear-gradient(
+      223deg,
+      rgba(194, 194, 194, 0.08) 0%,
+      rgba(194, 194, 194, 0.08) 50%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(
+      82deg,
+      rgba(27, 27, 27, 0.01) 0%,
+      rgba(27, 27, 27, 0.01) 50%,
+      rgba(197, 197, 197, 0.01) 50%,
+      rgba(197, 197, 197, 0.01) 100%
+    ),
+    linear-gradient(
+      281deg,
+      rgba(3, 3, 3, 0.09) 0%,
+      rgba(3, 3, 3, 0.09) 50%,
+      rgba(198, 198, 198, 0.09) 50%,
+      rgba(198, 198, 198, 0.09) 100%
+    ),
+    linear-gradient(
+      319deg,
+      rgba(47, 47, 47, 0.01) 0%,
+      rgba(47, 47, 47, 0.01) 50%,
+      rgba(89, 89, 89, 0.01) 50%,
+      rgba(89, 89, 89, 0.01) 100%
+    ),
+    linear-gradient(
+      278deg,
+      rgba(243, 243, 243, 0.06) 0%,
+      rgba(243, 243, 243, 0.06) 50%,
+      rgba(63, 63, 63, 0.06) 50%,
+      rgba(63, 63, 63, 0.06) 100%
+    ),
+    linear-gradient(
+      38deg,
+      rgba(81, 81, 81, 0.09) 0%,
+      rgba(81, 81, 81, 0.09) 50%,
+      rgba(201, 201, 201, 0.09) 50%,
+      rgba(201, 201, 201, 0.09) 100%
+    ),
+    linear-gradient(
+      33deg,
+      rgba(168, 168, 168, 0.08) 0%,
+      rgba(168, 168, 168, 0.08) 50%,
+      rgba(129, 129, 129, 0.08) 50%,
+      rgba(129, 129, 129, 0.08) 100%
+    ),
+    linear-gradient(0deg, #1b9efe, #46f3e7);
+}
+.box {
+  width: 100%;
+  background: #fcfcfc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.box__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+.box__header div {
+  padding: 5px 0;
+}
+.question {
+  margin-bottom: 30px;
+}
+ul {
+  list-style: none;
+}
+.quiz li {
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  color: #666;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 300ms ease-in;
+  cursor: pointer;
+}
+.quiz li.select {
+  background: #68c9c6;
+  color: #fff;
+  animation: zoomOut 300ms ease;
+}
+
+@keyframes zoomOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+.submit {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  color: #fff;
+  background: #f05577;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.certificate {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  width: 320px;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvXc9FwiY9FLZBAkVVbblE0m6gLlFYhXAgKg&usqp=CAU");
+  background-size: cover;
+  background-position: center center;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+}
+.certificate h4 {
+  margin-top: 36px;
+  color: #000;
+  margin-bottom: 8px;
+}
+#date {
+  position: absolute;
+  left: 40px;
+  bottom: 25px;
+  font-size: 12px;
+}
+.sin {
+  position: absolute;
+  right: 40px;
+  bottom: 25px;
+  font-family: cursive;
+  text-decoration: underline;
+}
+.btn {
+  padding: 10px 20px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  color: #fff;
+  background: #f05577;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+button:hover {
+  opacity: 0.9;
+  animation: zoomOut 300ms ease;
+}
+.red {
+  color: #f00;
+}
+.green {
+  color: #00ff04;
+}
+.ans-list {
+  margin: 20px 0;
+}
+.ans-list li {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  color: #666;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+}
+.ans-list li h5 {
+  margin-top: 5px;
+  color: #474343;
+  font-weight: normal;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.box__header .toast {
+  display: inline-block;
+  background: #f05577;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #fff;
+  opacity: 0.7;
+  display: none;
+}
+.btn1 {
+  background: #f2d533;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 12px 25px;
+}
+.des {
+  margin: 15px 0;
+  text-align: left;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+h3.mb-1 {
+  color: #f05577;
+  text-transform: capitalize;
+  border-bottom: 1px solid #999;
+  padding-bottom: 5px;
+  display: inline-block;
+  font-size: 20px;
+}
+.great {
+  text-align: center;
+  font-size: 4rem;
+  color: #f05577;
+  opacity: 0.7;
+}
